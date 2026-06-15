@@ -1,6 +1,13 @@
 <?php
 
+use App\Http\Controllers\CarController;
+use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Route;
+
+// Route::resource('/products', [ProductController::class, 'index']);
+//php artisan make:view index
+
+// -------------------------------
 
 
 // Route::get('/hell', function () {
@@ -57,12 +64,20 @@ use Illuminate\Support\Facades\Route;
 
 //Group Route
 
-Route::prefix('admin')->group(function () {
-    Route::get('/users', function () {
-        return "admin/users";
-    });
-});
+// Route::prefix('admin')->group(function () {
+//     Route::get('/users', function () {
+//         return "admin/users";
+//     });
+// });
 
-Route::fallback(function () {
-    return "This Page is Not Found !!!!";
-});
+
+
+
+// Route::controller(CarController::class)->group(function () {
+//     Route::get('/car', 'index');
+// });
+
+
+// Route::fallback(function () {
+//     return "This Page is Not Found !!!!";
+// });
